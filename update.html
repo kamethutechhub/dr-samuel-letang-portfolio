@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Content Form &mdash; Apostle Dr. Samuel Letang</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Private content form to build out the official portfolio of Apostle Dr. Samuel Letang." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/update.css" />
+</head>
+<body class="form-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="form-hero">
+    <div class="container">
+      <a href="index.html" class="form-hero__back">&larr; Back to the website</a>
+      <p class="eyebrow">Private Content Form</p>
+      <h1>Building your full portfolio</h1>
+      <p class="form-hero__lead">
+        Dr. Letang, what is online today is a <strong>starting point</strong> &mdash; built from
+        publicly available information. This form helps us tell your story properly and accurately.
+        Please fill in as much as you can; <strong>every field is optional</strong>, so share whatever
+        you have and skip the rest. You can come back and add more later.
+      </p>
+      <div class="form-hero__note">
+        <strong>Your privacy:</strong> nothing is saved on the internet as you type. When you finish,
+        click <em>Download</em>, <em>Copy</em>, or <em>Email</em> at the bottom to send your answers to
+        the team. Photos are best emailed separately (see the last section).
+      </div>
+    </div>
+  </header>
+
+  <main class="container form-main">
+    <form id="intakeForm" autocomplete="on">
+
+      <!-- 1. YOU -->
+      <fieldset class="fs" data-title="1 · About You">
+        <legend><span class="fs__num">01</span> About You</legend>
+        <div class="grid grid-2">
+          <div class="field"><label for="fullName">Full name (as it should appear)</label>
+            <input type="text" id="fullName" data-label="Full name" placeholder="e.g. Apostle Dr. Samuel Letang" /></div>
+          <div class="field"><label for="titles">Titles / honorifics</label>
+            <input type="text" id="titles" data-label="Titles" placeholder="e.g. Apostle, Dr., Rev." /></div>
+          <div class="field"><label for="preferredName">Preferred short name</label>
+            <input type="text" id="preferredName" data-label="Preferred short name" placeholder="e.g. Dr. Letang" /></div>
+          <div class="field"><label for="dob">Date of birth (optional)</label>
+            <input type="text" id="dob" data-label="Date of birth" placeholder="e.g. 12 March 1970" /></div>
+          <div class="field"><label for="birthplace">Place of birth / home village or town</label>
+            <input type="text" id="birthplace" data-label="Place of birth / home" placeholder="e.g. Maun, Botswana" /></div>
+          <div class="field"><label for="basedIn">Currently based in</label>
+            <input type="text" id="basedIn" data-label="Based in" placeholder="e.g. Gaborone, Botswana" /></div>
+        </div>
+        <div class="field"><label for="lifeVerse">Life verse / personal motto</label>
+          <input type="text" id="lifeVerse" data-label="Life verse / motto" placeholder="e.g. 2 Peter 1:21 — 'Moved by God'" /></div>
+        <div class="field"><label for="oneLine">One sentence that best describes you and your calling</label>
+          <textarea id="oneLine" rows="2" data-label="One-line description" placeholder="Used as a headline / tagline on the site."></textarea></div>
+      </fieldset>
+
+      <!-- 2. FAMILY -->
+      <fieldset class="fs" data-title="2 · Family">
+        <legend><span class="fs__num">02</span> Family</legend>
+        <div class="grid grid-2">
+          <div class="field"><label for="spouse">Spouse&rsquo;s name</label>
+            <input type="text" id="spouse" data-label="Spouse" placeholder="e.g. Magdalene Letang" /></div>
+          <div class="field"><label for="marriedYear">Year married (optional)</label>
+            <input type="text" id="marriedYear" data-label="Year married" /></div>
+          <div class="field"><label for="children">Children (names / number, optional)</label>
+            <input type="text" id="children" data-label="Children" /></div>
+          <div class="field"><label for="spouseRole">Spouse&rsquo;s role in ministry</label>
+            <input type="text" id="spouseRole" data-label="Spouse's ministry role" placeholder="e.g. Co-pastor, women's ministry leader" /></div>
+        </div>
+        <div class="field"><label for="familyNote">Anything about your family you&rsquo;d like included</label>
+          <textarea id="familyNote" rows="2" data-label="Family note"></textarea></div>
+      </fieldset>
+
+      <!-- 3. STORY / BIO -->
+      <fieldset class="fs" data-title="3 · Your Story">
+        <legend><span class="fs__num">03</span> Your Story</legend>
+        <div class="field"><label for="bioShort">Short bio (2&ndash;3 sentences)</label>
+          <textarea id="bioShort" rows="3" data-label="Short bio"></textarea></div>
+        <div class="field"><label for="bioFull">Full biography (as long as you like)</label>
+          <textarea id="bioFull" rows="7" data-label="Full bio" placeholder="Your background, upbringing, and journey in your own words."></textarea></div>
+        <div class="field"><label for="callStory">Your call / testimony &mdash; how God called you into ministry</label>
+          <textarea id="callStory" rows="5" data-label="Call & testimony"></textarea></div>
+        <div class="field"><label for="interests">Personal interests / hobbies (optional)</label>
+          <input type="text" id="interests" data-label="Interests & hobbies" /></div>
+      </fieldset>
+
+      <!-- 4. EDUCATION -->
+      <fieldset class="fs" data-title="4 · Education & Qualifications">
+        <legend><span class="fs__num">04</span> Education &amp; Qualifications</legend>
+        <p class="fs__hint">We currently show a <em>&ldquo;Formation&rdquo;</em> milestone because we couldn&rsquo;t confirm your degree years online. Please list each qualification with its year so we can build a proper, dated timeline.</p>
+        <div class="repeat" data-label="Qualifications" data-entry="Qualification">
+          <div class="repeat__item">
+            <div class="grid grid-2">
+              <div class="field"><label>Qualification</label><input type="text" data-label="Qualification" placeholder="e.g. Bachelor of Arts (BA)" /></div>
+              <div class="field"><label>Field / specialisation</label><input type="text" data-label="Field" placeholder="e.g. Bible & Theology" /></div>
+              <div class="field"><label>Institution</label><input type="text" data-label="Institution" placeholder="e.g. Global University" /></div>
+              <div class="field"><label>Year completed</label><input type="text" data-label="Year completed" placeholder="e.g. 2004" /></div>
+            </div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another qualification</button>
+        <div class="field"><label for="doctorateTopic">Doctorate &mdash; topic / thesis title &amp; awarding institution</label>
+          <input type="text" id="doctorateTopic" data-label="Doctorate topic & institution" /></div>
+      </fieldset>
+
+      <!-- 5. MINISTRY JOURNEY -->
+      <fieldset class="fs" data-title="5 · Ministry Journey & Roles">
+        <legend><span class="fs__num">05</span> Ministry Journey &amp; Roles</legend>
+        <p class="fs__hint">Key milestones for your timeline. We already have: first called to pastor, President of Assembly Bible College (2009&ndash;2015), and Senior Pastor of Tlokweng AOG. Please confirm and add the rest with years.</p>
+        <div class="grid grid-2">
+          <div class="field"><label for="firstCallYear">Year first called / ordained to pastor</label>
+            <input type="text" id="firstCallYear" data-label="Year first called/ordained" /></div>
+          <div class="field"><label for="firstChurch">First church you pastored</label>
+            <input type="text" id="firstChurch" data-label="First church" /></div>
+          <div class="field"><label for="apostleYear">Year recognised as Apostle</label>
+            <input type="text" id="apostleYear" data-label="Year recognised as Apostle" /></div>
+          <div class="field"><label for="tlokwengStart">Year you became Senior Pastor of Tlokweng AOG</label>
+            <input type="text" id="tlokwengStart" data-label="Tlokweng senior-pastor start year" /></div>
+        </div>
+        <div class="repeat" data-label="Roles & milestones" data-entry="Role">
+          <div class="repeat__item">
+            <div class="grid grid-3">
+              <div class="field"><label>Year / period</label><input type="text" data-label="Year/period" placeholder="e.g. 2007–2009" /></div>
+              <div class="field"><label>Role / title</label><input type="text" data-label="Role" placeholder="e.g. Lecturer, Bible College" /></div>
+              <div class="field"><label>Organisation</label><input type="text" data-label="Organisation" /></div>
+            </div>
+            <div class="field"><label>Short description</label><input type="text" data-label="Description" /></div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another role / milestone</button>
+      </fieldset>
+
+      <!-- 6. LEADERSHIP -->
+      <fieldset class="fs" data-title="6 · Leadership & Recognition">
+        <legend><span class="fs__num">06</span> Leadership &amp; Recognition</legend>
+        <div class="field"><label for="leadPhilosophy">Your leadership philosophy / approach (a few sentences)</label>
+          <textarea id="leadPhilosophy" rows="4" data-label="Leadership philosophy"></textarea></div>
+        <div class="field"><label for="boards">Boards, councils &amp; denominational positions you hold or have held</label>
+          <textarea id="boards" rows="3" data-label="Boards & positions"></textarea></div>
+        <div class="field"><label for="awards">Awards, honours &amp; recognitions</label>
+          <textarea id="awards" rows="3" data-label="Awards & recognitions"></textarea></div>
+        <div class="field"><label for="mentorship">Mentorship / leadership-development initiatives you lead</label>
+          <textarea id="mentorship" rows="3" data-label="Mentorship initiatives"></textarea></div>
+        <div class="field"><label for="favQuotes">Favourite quotes / sayings of yours we can feature</label>
+          <textarea id="favQuotes" rows="3" data-label="Signature quotes"></textarea></div>
+      </fieldset>
+
+      <!-- 7. SPEAKING -->
+      <fieldset class="fs" data-title="7 · Speaking & Conferences">
+        <legend><span class="fs__num">07</span> Speaking &amp; Conferences</legend>
+        <div class="repeat" data-label="Speaking engagements" data-entry="Event">
+          <div class="repeat__item">
+            <div class="grid grid-3">
+              <div class="field"><label>Event / conference</label><input type="text" data-label="Event" /></div>
+              <div class="field"><label>Year</label><input type="text" data-label="Year" /></div>
+              <div class="field"><label>Topic / theme</label><input type="text" data-label="Topic" /></div>
+            </div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another engagement</button>
+        <div class="field"><label for="speakTopics">Topics you are available to speak on</label>
+          <textarea id="speakTopics" rows="2" data-label="Available speaking topics"></textarea></div>
+      </fieldset>
+
+      <!-- 8. PUBLICATIONS -->
+      <fieldset class="fs" data-title="8 · Articles & Publications">
+        <legend><span class="fs__num">08</span> Articles &amp; Publications</legend>
+        <p class="fs__hint">Important: we could not find your <strong>University of Botswana</strong> articles online. Please list them here (with links if possible) so we can feature them accurately &mdash; we will not invent any.</p>
+        <div class="repeat" data-label="Articles & papers" data-entry="Publication">
+          <div class="repeat__item">
+            <div class="grid grid-2">
+              <div class="field"><label>Title</label><input type="text" data-label="Title" /></div>
+              <div class="field"><label>Publication / outlet</label><input type="text" data-label="Outlet" placeholder="e.g. University of Botswana journal" /></div>
+              <div class="field"><label>Year</label><input type="text" data-label="Year" /></div>
+              <div class="field"><label>Co-authors (if any)</label><input type="text" data-label="Co-authors" /></div>
+            </div>
+            <div class="field"><label>Link (URL)</label><input type="url" data-label="Link" placeholder="https://" /></div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another article / paper</button>
+      </fieldset>
+
+      <!-- 9. BOOKS -->
+      <fieldset class="fs" data-title="9 · Books">
+        <legend><span class="fs__num">09</span> Books</legend>
+        <p class="fs__hint">Confirm the details of <em>&ldquo;Looking Up to Master Jesus&rdquo;</em> (coming October 2026) and list any other books.</p>
+        <div class="repeat" data-label="Books" data-entry="Book">
+          <div class="repeat__item">
+            <div class="grid grid-2">
+              <div class="field"><label>Title</label><input type="text" data-label="Title" placeholder="e.g. Looking Up to Master Jesus" /></div>
+              <div class="field"><label>Subtitle</label><input type="text" data-label="Subtitle" /></div>
+              <div class="field"><label>Publisher</label><input type="text" data-label="Publisher" /></div>
+              <div class="field"><label>Release date</label><input type="text" data-label="Release date" placeholder="e.g. October 2026" /></div>
+              <div class="field"><label>ISBN (if known)</label><input type="text" data-label="ISBN" /></div>
+              <div class="field"><label>Where to buy / pre-order (URL)</label><input type="url" data-label="Purchase link" placeholder="https://" /></div>
+            </div>
+            <div class="field"><label>Synopsis / back-cover blurb</label><textarea rows="3" data-label="Synopsis"></textarea></div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another book</button>
+        <div class="field"><label for="coverNote">Do you have final cover artwork for the book? (we currently use a placeholder)</label>
+          <input type="text" id="coverNote" data-label="Book cover status" placeholder="e.g. Yes — will email the cover file" /></div>
+      </fieldset>
+
+      <!-- 10. SERMONS -->
+      <fieldset class="fs" data-title="10 · Sermons & Teaching">
+        <legend><span class="fs__num">10</span> Sermons &amp; Teaching</legend>
+        <div class="repeat" data-label="Featured sermons" data-entry="Sermon">
+          <div class="repeat__item">
+            <div class="grid grid-3">
+              <div class="field"><label>Sermon title</label><input type="text" data-label="Title" /></div>
+              <div class="field"><label>Scripture</label><input type="text" data-label="Scripture" /></div>
+              <div class="field"><label>Series / theme</label><input type="text" data-label="Series" /></div>
+            </div>
+            <div class="field"><label>Video / audio link</label><input type="url" data-label="Link" placeholder="https://" /></div>
+            <button type="button" class="repeat__remove" aria-label="Remove this entry">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add" data-add>+ Add another sermon</button>
+        <div class="grid grid-2">
+          <div class="field"><label for="youtube">YouTube channel</label><input type="url" id="youtube" data-label="YouTube" placeholder="https://" /></div>
+          <div class="field"><label for="podcast">Podcast / audio link</label><input type="url" id="podcast" data-label="Podcast" placeholder="https://" /></div>
+        </div>
+      </fieldset>
+
+      <!-- 11. CHURCH -->
+      <fieldset class="fs" data-title="11 · The Church (Tlokweng AOG)">
+        <legend><span class="fs__num">11</span> The Church &mdash; Tlokweng AOG</legend>
+        <div class="grid grid-2">
+          <div class="field"><label for="churchFounded">Year church was founded</label><input type="text" id="churchFounded" data-label="Founded" /></div>
+          <div class="field"><label for="congSize">Approx. congregation size</label><input type="text" id="congSize" data-label="Congregation size" /></div>
+        </div>
+        <div class="field"><label for="churchHistory">Brief church history</label><textarea id="churchHistory" rows="4" data-label="Church history"></textarea></div>
+        <div class="field"><label for="ministries">Ministries / departments (e.g. youth, women, men, music, children, outreach)</label><textarea id="ministries" rows="3" data-label="Ministries & departments"></textarea></div>
+        <div class="field"><label for="visionConfirm">Confirm or correct the vision &amp; mission</label><textarea id="visionConfirm" rows="3" data-label="Vision/mission confirmation" placeholder="We currently show: Vision — 'Reaching the Lost & Equipping the Found'."></textarea></div>
+        <div class="grid grid-2">
+          <div class="field"><label for="serviceTimes">Service times (confirm/correct)</label><input type="text" id="serviceTimes" data-label="Service times" /></div>
+          <div class="field"><label for="giving">Giving / donation details (optional)</label><input type="text" id="giving" data-label="Giving details" /></div>
+        </div>
+      </fieldset>
+
+      <!-- 12. CONTACT & SOCIAL -->
+      <fieldset class="fs" data-title="12 · Contact & Social Media">
+        <legend><span class="fs__num">12</span> Contact &amp; Social Media</legend>
+        <div class="grid grid-2">
+          <div class="field"><label for="pubEmail">Public email</label><input type="email" id="pubEmail" data-label="Public email" /></div>
+          <div class="field"><label for="pubPhone">Public phone</label><input type="text" id="pubPhone" data-label="Public phone" /></div>
+          <div class="field"><label for="whatsapp">WhatsApp number</label><input type="text" id="whatsapp" data-label="WhatsApp" /></div>
+          <div class="field"><label for="officeAddr">Office / physical address</label><input type="text" id="officeAddr" data-label="Office address" /></div>
+          <div class="field"><label for="sFacebook">Facebook</label><input type="text" id="sFacebook" data-label="Facebook" /></div>
+          <div class="field"><label for="sTiktok">TikTok</label><input type="text" id="sTiktok" data-label="TikTok" /></div>
+          <div class="field"><label for="sInsta">Instagram</label><input type="text" id="sInsta" data-label="Instagram" /></div>
+          <div class="field"><label for="sLinkedin">LinkedIn</label><input type="text" id="sLinkedin" data-label="LinkedIn" /></div>
+          <div class="field"><label for="sYouTube">YouTube</label><input type="text" id="sYouTube" data-label="YouTube handle" /></div>
+          <div class="field"><label for="sX">X / Twitter</label><input type="text" id="sX" data-label="X / Twitter" /></div>
+        </div>
+        <div class="field"><label for="bookingContact">Best contact for speaking / booking requests</label><input type="text" id="bookingContact" data-label="Booking contact" /></div>
+      </fieldset>
+
+      <!-- 13. PHOTOS -->
+      <fieldset class="fs" data-title="13 · Photos & Media">
+        <legend><span class="fs__num">13</span> Photos &amp; Media</legend>
+        <p class="fs__hint">High-resolution photos make the biggest difference. Please email the actual image files to the team, or paste a shareable link (Google Drive / Dropbox / WeTransfer) below.</p>
+        <div class="field"><label for="photoLink">Link to your photos folder</label><input type="url" id="photoLink" data-label="Photos link" placeholder="https://" /></div>
+        <div class="field"><label for="photoWishlist">Which photos do you want featured? (formal portrait, preaching, family, etc.)</label><textarea id="photoWishlist" rows="2" data-label="Photo wishlist"></textarea></div>
+        <div class="field"><label for="logo">Do you have a personal or church logo? (link or note)</label><input type="text" id="logo" data-label="Logo" /></div>
+      </fieldset>
+
+      <!-- 14. PREFERENCES -->
+      <fieldset class="fs" data-title="14 · Website Preferences">
+        <legend><span class="fs__num">14</span> Website Preferences</legend>
+        <div class="grid grid-2">
+          <div class="field"><label for="domain">Domain name you&rsquo;d like (if any)</label><input type="text" id="domain" data-label="Preferred domain" placeholder="e.g. samuelletang.org" /></div>
+          <div class="field"><label for="languages">Languages (e.g. English, Setswana)</label><input type="text" id="languages" data-label="Languages" /></div>
+        </div>
+        <div class="field"><label for="colours">Colour / branding preferences</label><input type="text" id="colours" data-label="Branding preferences" placeholder="Current theme: deep navy & gold" /></div>
+        <div class="field"><label for="addSections">Any sections you&rsquo;d like added or removed?</label><textarea id="addSections" rows="2" data-label="Section requests"></textarea></div>
+        <div class="field"><label for="anythingElse">Anything else you&rsquo;d like us to know</label><textarea id="anythingElse" rows="4" data-label="Anything else"></textarea></div>
+        <div class="field"><label for="yourName">Filled in by (name) &amp; date</label><input type="text" id="yourName" data-label="Filled in by" /></div>
+      </fieldset>
+
+    </form>
+  </main>
+
+  <!-- ===== ACTION BAR ===== -->
+  <div class="form-actions" id="formActions">
+    <div class="container form-actions__inner">
+      <p class="form-actions__status" id="formStatus" aria-live="polite">When you&rsquo;re ready, send us your answers &rarr;</p>
+      <div class="form-actions__buttons">
+        <button type="button" class="btn btn--gold" id="btnDownload">&#8681; Download my answers</button>
+        <button type="button" class="btn btn--ghost-dark" id="btnCopy">Copy to clipboard</button>
+        <button type="button" class="btn btn--ghost-dark" id="btnEmail">Email my answers</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> Apostle Dr. Samuel Letang &middot; This form is private and is not indexed by search engines.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/update.js"></script>
+</body>
+</html>
