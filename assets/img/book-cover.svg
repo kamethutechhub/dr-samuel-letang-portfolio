@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-label="Book cover: Looking Up to Master Jesus by Apostle Dr. Samuel Letang">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#143153"/>
+      <stop offset="0.55" stop-color="#0e2238"/>
+      <stop offset="1" stop-color="#091523"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="65%">
+      <stop offset="0" stop-color="#d9bd76" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#c4a052" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#c4a052" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <!-- light from above ("looking up") -->
+  <rect width="600" height="900" fill="url(#glow)"/>
+  <g stroke="#d9bd76" stroke-opacity="0.35" stroke-width="1.4">
+    <line x1="300" y1="-20" x2="170" y2="250"/>
+    <line x1="300" y1="-20" x2="240" y2="270"/>
+    <line x1="300" y1="-20" x2="300" y2="280"/>
+    <line x1="300" y1="-20" x2="360" y2="270"/>
+    <line x1="300" y1="-20" x2="430" y2="250"/>
+  </g>
+
+  <!-- inner frame -->
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#c4a052" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- eyebrow -->
+  <text x="300" y="300" text-anchor="middle" fill="#d9bd76"
+        font-family="Georgia, 'Times New Roman', serif" font-size="20" letter-spacing="6">A DEVOTIONAL JOURNEY</text>
+
+  <!-- title -->
+  <text x="300" y="400" text-anchor="middle" fill="#ffffff"
+        font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="78" font-weight="500">Looking Up</text>
+  <text x="300" y="466" text-anchor="middle" fill="#d9bd76"
+        font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40">to</text>
+  <text x="300" y="556" text-anchor="middle" fill="#ffffff"
+        font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="600" letter-spacing="1">Master</text>
+  <text x="300" y="636" text-anchor="middle" fill="#ffffff"
+        font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="600" letter-spacing="6">JESUS</text>
+
+  <!-- divider -->
+  <line x1="230" y1="690" x2="370" y2="690" stroke="#c4a052" stroke-width="2"/>
+
+  <!-- author -->
+  <text x="300" y="760" text-anchor="middle" fill="#e9e2d2"
+        font-family="Georgia, 'Times New Roman', serif" font-size="26" letter-spacing="2">Apostle Dr. Samuel Letang</text>
+
+  <!-- footer -->
+  <text x="300" y="820" text-anchor="middle" fill="#9aa6b4"
+        font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="4">COMING OCTOBER 2026</text>
+</svg>

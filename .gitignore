@@ -1,0 +1,15 @@
+# Original high-res source photos (not needed by the site; optimized copies live in assets/img/)
+Pics/
+
+# Vercel
+.vercel
+
+# Dependencies / build (none currently, but just in case)
+node_modules/
+dist/
+.cache/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
