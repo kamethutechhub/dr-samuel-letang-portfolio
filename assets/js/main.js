@@ -109,7 +109,95 @@ function initReveal() {
 }
 
 /* ----------------------------------------------------------
-   4) Footer year
+   4) DIRECT CONTACT FORM (reaches Dr. Letang, not the church)
+   ----------------------------------------------------------
+   CONTACT.email    : Dr. Letang's dedicated/direct address.
+                      ⚠️ PLACEHOLDER — replace with his real address.
+   CONTACT.endpoint : optional Formspree/Getform URL. If set,
+                      messages POST there automatically (no mailto).
+   --------------------------------------------------------- */
+const CONTACT = {
+  email: "hello@samuelletang.org", // ← TODO: replace with Dr. Letang's real direct email
+  endpoint: "",                     // ← optional: paste a Formspree URL to enable auto-delivery
+};
+
+function initContact() {
+  // surface the direct office email in the sidebar
+  const link = document.getElementById("directEmail");
+  if (link) {
+    link.textContent = "✉  " + CONTACT.email;
+    link.href = "mailto:" + CONTACT.email;
+  }
+
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+  const status = document.getElementById("contactStatus");
+  const get = (id) => document.getElementById(id);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = get("cName"), email = get("cEmail"), msg = get("cMessage");
+    // simple validation
+    let ok = true;
+    [name, email, msg].forEach((el) => {
+      const bad = !el.value.trim();
+      el.classList.toggle("invalid", bad);
+      if (bad) ok = false;
+    });
+    if (email.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)) {
+      email.classList.add("invalid"); ok = false;
+    }
+    if (!ok) { setCStatus(status, "Please add your name, a valid email, and a message.", "err"); return; }
+
+    const reason = get("cPurpose").value || "General enquiry";
+    const org = get("cOrg").value.trim();
+    const lines = [
+      `Name: ${name.value.trim()}`,
+      `Email: ${email.value.trim()}`,
+      org ? `Organisation: ${org}` : null,
+      `Reason: ${reason}`,
+      ``,
+      name.value.trim() + " writes:",
+      msg.value.trim(),
+    ].filter((l) => l !== null);
+    const body = lines.join("\n");
+    const subject = `Website enquiry — ${reason}`;
+
+    // Formspree path (if configured) → automatic delivery
+    if (CONTACT.endpoint) {
+      fetch(CONTACT.endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name: name.value, email: email.value, organisation: org, reason, message: msg.value }),
+      })
+        .then((r) => {
+          if (r.ok) { form.reset(); setCStatus(status, "Thank you — your message has been sent to Dr. Letang's office.", "ok"); }
+          else throw new Error("post failed");
+        })
+        .catch(() => openMailto(subject, body, status));
+      return;
+    }
+
+    // mailto fallback
+    openMailto(subject, body, status);
+  });
+}
+
+function openMailto(subject, body, status) {
+  window.location.href =
+    `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  setCStatus(status, "Opening your email app to send the message…", "ok");
+}
+
+function setCStatus(el, msg, kind) {
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.remove("ok", "err");
+  if (kind) el.classList.add(kind);
+}
+
+/* ----------------------------------------------------------
+   5) Footer year
    --------------------------------------------------------- */
 function initYear() {
   const y = document.getElementById("year");
@@ -121,5 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMessages();
   initNav();
   initReveal();
+  initContact();
   initYear();
 });
